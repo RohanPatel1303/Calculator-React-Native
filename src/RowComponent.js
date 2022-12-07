@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet,View } from "react-native";
-const Row=({children})=>{
+const Row=({children,styles})=>{
     return (
         <View style={style.container}>
             {children}
@@ -9,7 +9,8 @@ const Row=({children})=>{
 }
 const style=StyleSheet.create(
     {container:{
-        flexDirection:"row"
+        flexDirection:"row",
+        marginTop:8,
 
     }
     }

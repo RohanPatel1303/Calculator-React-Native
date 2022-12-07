@@ -14,9 +14,12 @@ const ButtonCalc=({onPress,text,Size,Theme})=>{
     }else if(Theme==="accent"){
         buttonStyles.push(styles.buttonAccent);
     }
+    else if(Theme==="red"){
+        buttonStyles.push(styles.red)
+    }
     return(
         <TouchableOpacity onPress={onPress} style={[buttonStyles]}>
-            <Text>{text}</Text>
+            <Text style={styles.double}>{text}</Text>
         </TouchableOpacity>
     
     )
@@ -30,15 +33,17 @@ const styles=StyleSheet.create({
         justifyContent:"center",
         borderRadius:Math.floor(buttonwidth),
         margin:5,
+        fontSize:100
 
     },
     text:{
         color:"#fff",
-        fontSize:24,
+        fontSize:100,
     
     },
     textsecondary:{
         color:"#060606",
+        fontSize:100
 
     },
     buttonDouble:{
@@ -46,10 +51,17 @@ const styles=StyleSheet.create({
     },
     buttonSecondary:{
         backgroundColor:"#a6a6a6",
+        
 
     },
     buttonAccent:{
         backgroundColor:"#ffc107",
+    },
+    red:{
+        backgroundColor:"rgb(235, 101, 101)"
+    },
+    double:{
+        fontSize:24,
     }
 
 })
